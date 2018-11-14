@@ -1,0 +1,91 @@
+<div id="wrapper" class="wrapper" [class.is-hide-aside-big]="hideAsideInBig" [class.is-hide-aside-small]="hideAsideInSmall">
+    <header class="topnavbar-wrapper">
+        <nav role="navigation" class="navbar topnavbar">
+            <div class="navbar-header">
+                <!-- <div class="navbar-brand text-white" routerLink="/dashboard/amount">BAJAJ AUTO</div> -->
+                <img src="../assets/eternus-logo.png" class="sidebarLogo hidden-xs">
+            </div>
+            <div class="nav-wrapper">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <!-- Button used to collapse the left sidebar. Only visible on tablet and desktops-->
+                        <a class="hidden-xs" (click)="hideAsideInBig = !hideAsideInBig">
+            <em class="fa fa-navicon"></em>
+          </a>
+                        <!-- Button to show/hide the sidebar on mobile. Visible on mobile only.-->
+                        <a class="visible-xs sidebar-toggle" (click)="hideAsideInSmall = !hideAsideInSmall">
+            <em class="fa fa-navicon" style="color:black;"></em>
+          </a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right hidden-xs">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-user"></i> Chetan Badgujar <i class="fa fa-caret-down"></i> 
+          </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-left visible-xs">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-user"></i> Chetan Badgujar <i class="fa fa-caret-down"></i> 
+          </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <aside class="aside">
+        <div class="aside-inner">
+            <nav class="sidebar">
+                <ul class="nav">
+                    <li routerLink="dashboard" routerLinkActive="active" title="Dashboard">
+                        <a>
+            <em class="fa fa-tachometer"></em>
+            <span class="hidden-xs">Dashboard</span>
+          </a>
+                    </li>
+                    <li routerLink="report" routerLinkActive="active" title="Report">
+                        <a>
+            <em class="fa fa-book"></em>
+            <span class="hidden-xs">Report</span>
+          </a>
+                    </li>
+                    <li routerLink="video" routerLinkActive="active" title="video">
+                        <a>
+            <em class="fa fa-video-camera"></em>
+            <span class="hidden-xs">Video</span>
+          </a>
+                    </li>
+                    <li routerLink="/dashboard/story" routerLinkActive="active" title="story">
+                        <a>
+            <em class="fa fa-book"></em>
+            <span class="hidden-xs">Story</span>
+          </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <section class="section">
+        <div class="content-wrapper">
+            <div>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </section>
+</div>

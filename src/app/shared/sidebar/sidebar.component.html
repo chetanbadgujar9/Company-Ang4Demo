@@ -1,0 +1,50 @@
+<div id="wrapper" class="wrapper" [class.is-hide-aside-big]="hideAsideInBig"  [class.is-hide-aside-small]="hideAsideInSmall">
+<header class="topnavbar-wrapper">
+  <nav role="navigation" class="navbar topnavbar">
+    <div class="navbar-header">
+      <div class="navbar-brand text-white" routerLink="/dashboard/amount">Bajaj Auto</div>
+    </div>
+    <div class="nav-wrapper">
+      <ul class="nav navbar-nav navbar-right">
+        <li routerLink="/dashboard/user" routerLinkActive="active">
+          <a>
+            <i class="fa fa-user"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<aside class="aside">
+  <div class="aside-inner">
+    <nav class="sidebar">
+      <ul class="nav">
+        <li routerLink="/dashboard" routerLinkActive="active" title="photo">
+          <a>
+            <em class="fa fa-picture-o"></em>
+            <span class="hidden-xs">Photo</span>
+          </a>
+        </li>
+        <li routerLink="/dashboard/music" routerLinkActive="active" title="music">
+          <a>
+            <em class="fa fa-music"></em>
+            <span class="hidden-xs">Music</span>
+          </a>
+        </li>
+        <li routerLink="/dashboard/video" routerLinkActive="active" title="video">
+          <a>
+            <em class="fa fa-video-camera"></em>
+            <span class="hidden-xs">Video</span>
+          </a>
+        </li>
+        <li routerLink="/dashboard/story" routerLinkActive="active" title="story">
+          <a>
+            <em class="fa fa-book"></em>
+            <span class="hidden-xs">Story</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</aside>
+</div>

@@ -1,0 +1,45 @@
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">Registration Form</h3>
+    </div>
+    <div class="panel-body">
+        <form role="form" (ngSubmit)="onSubmitForm(AddForm)" [formGroup]="AddForm">
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" formControlName="FirstName" class="form-control" />
+                        <div class="required" *ngIf="AddForm.get('FirstName').hasError('required') && addFlag">
+                            Mandetory
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" class="form-control" formControlName="LastName" />
+                        <div class="required" *ngIf="AddForm.get('LastName').hasError('required') && addFlag">
+                            Mandetory
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <label>Country</label>
+                        <select formControlName="Country" (change)="onSelect($event.target.value)">
+                            <option value="India">India</option>
+                            <option value="USA">USA</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <button type="submit">SAve</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

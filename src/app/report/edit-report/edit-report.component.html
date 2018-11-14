@@ -1,0 +1,22 @@
+<div class="content-heading">
+    Edit Reports
+</div>
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">Edit Report</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-lg-6">
+                <qrcode [qrdata]="'This is demo QR code string'" [size]="256" [level]="'M'"></qrcode>
+            </div>
+            <div class="col-lg-6">
+                <qrcode [qrdata]="'Your QR code data string'" [size]="256" [level]="'M'"></qrcode>
+            </div>
+        </div>
+        <div class="row">
+            <signature-pad [options]="signaturePadOptions" (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete()"></signature-pad>
+        </div>
+            <img src='data:image/png;base64,{{url}}'>
+    </div>
+</div>

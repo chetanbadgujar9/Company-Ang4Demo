@@ -1,0 +1,26 @@
+<form role="form" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)" class="formClass">
+    <div class="row">
+        <div>
+            <label>Username</label>
+            <input type="text" class='form-control' formControlName='Username' placeholder="Enter User Name" name='username' />
+        </div>
+        <div *ngIf="loginForm.get('Username').hasError('required') && err">
+            Mandetory
+        </div>
+    </div>
+    <div class="row">
+        <div>
+            <label>Password</label>
+            <input type="password" class='form-control' formControlName='Password' placeholder="Enter Password" name="pwd" />
+        </div>
+        <div *ngIf="loginForm.get('Password').hasError('required') && err">
+            Mandetory
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 col-md-3 col-lg-3">
+            <label></label>
+            <button type="submit" class="form-control">Login</button>
+        </div>
+    </div>
+</form>
